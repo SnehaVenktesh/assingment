@@ -1,0 +1,105 @@
+node $mkdir nodejs
+node $cd nodejs
+nodejs $npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See npm help json for definitive documentation on these fields
+and exactly what they do.
+
+Use npm install  afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (nodejs)
+version: (1.0.0)
+description: Create a blog using Node.js
+entry point: (index.js)
+test command:
+git repository:
+keywords: blog
+author:
+license: (ISC)
+About to write to C:\node\nodejs-blog-tutorial\package.json:
+
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Create a blog using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes)
+nodejs $npm i startbootstrap-clean-blog
+nodejs $npm i express
+nodejs $npm i nodemon
+nodejs $touch index.js
+nodejs $mkdir public
+nodejs $mkdir pages
+nodejs $cd pages
+pages $touch index.html
+nodejs $cp -r theme/vendor public/vendor
+nodejs $cp -r theme/css public/css
+nodejs $cp -r theme/img public/img
+nodejs $cp -r theme/js public/js
+nodejs $cp -r theme/index.html pages/index.html
+nodejs $node index.js
+App listening on port 4000
+ $cp -r theme/about.html pages/about.html
+nodejs $nodemon index.js
+App listening on port 4000
+nodejs $cp -r theme/contact.html pages/contact.html
+nodejs $cp -r theme/post.html pages/post.html
+nodejs $npm install express-edge --save
+nodejs $mkdir views
+nodejs $touch views/index.edge
+nodejs $mkdir views/layouts
+nodejs $touch views/layouts/app.edge
+nodejs $npm i mongoose --save
+nodejs $mkdir database
+nodejs $cd database
+database $mkdir models
+database $touch models/Post.js
+nodejs $touch views/create.edge
+[nodemon] starting node index.js
+App listening on port 4000
+{ title: 'This is the title field',
+  description: 'Here is the description field',
+  content: 'The content for the post is here' }
+ mongo
+> use node-blog
+switched to db node-blog
+> db.dropDatabase()
+{ "dropped" : "node-blog", "ok" : 1 }
+nodejs $npm install --save express-fileupload
+nodejs $mkdir public/posts
+nodejs $mkdir middleware
+nodejs $touch middleware/storePost.js
+nodejs $mkdir controllers
+nodejs $touch controllers/createPost.js
+nodejs $touch controllers/getPost.js
+nodejs $touch controllers/homePage.js
+nodejs $touch controllers/storePost.js
+nodejs $touch controllers/createUser.js
+nodejs $touch database/models/User.js
+nodejs $touch controllers/storeUser.js
+nodejs $touch views/login.edge
+nodejs $touch controllers/login.js
+nodejs $touch controllers/loginUser.js
+nodejs $npm install express-session
+nodejs $npm i connect-mongo
+nodejs $touch middleware/auth.js
+nodejs $npm i connect-flash
+nodejs $touch middleware/redirectIfAuthenticated.js
+nodejs $touch controllers/logout.js
+
+
